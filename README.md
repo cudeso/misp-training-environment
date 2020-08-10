@@ -12,7 +12,7 @@ The training environment is based on [MISP-cloud](https://github.com/MISP/misp-c
 1. Change basic credentials and API keys. Run system update.
 1. Change MISP URL and basic settings. 
 1. Change auditing features of MISP to include client_ips in the logs
-1. Update rsyslog to seperate misp logs from 'normal syslog
+1. Update rsyslog to seperate misp logs from 'normal' syslog
 1. Configure the OSINT feed
 1. Add demo users and demo organization
 1. Truncate the logs (via mysql)
@@ -21,7 +21,7 @@ The training environment is based on [MISP-cloud](https://github.com/MISP/misp-c
 1. Ship logs to external log collector
 1. Enable Cloudlfare
 
-The restore resets all changes done by the users in the demo environment, including MISP system configuration changes. It **does not** restore the users. This allows the demo users to remain access, after the restore has happened.
+The restore resets all changes done by the users in the demo environment, including MISP system configuration changes. It **does not** restore the users. This allows demo users to keep access with newly created users (and API keys), after the restore has happened. Cleanup of demo users (and organisations) is a manual action.
 
 The script misp-restore-botvrij.sh is slightly altered compared to the original misp-restore. If does not require user-input (it can run from cron) and contains the Mysql root username.
 
