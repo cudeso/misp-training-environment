@@ -21,7 +21,7 @@ The training environment is based on [MISP-cloud](https://github.com/MISP/misp-c
 1. Ship logs to external log collector
 1. Enable Cloudlfare
 
-The restore resets all changes done by the users in the demo environment, including MISP system configuration changes. It **does not** restore the users. This allows demo users to keep access with newly created users (and API keys), after the restore has happened. Cleanup of demo users (and organisations) is a manual action.
+The restore resets all changes done by the users in the demo environment, including MISP system configuration changes. It **does not** restore the users or remove new created users/organisations. This allows demo users to keep access with their newly created users (and API keys), after the restore has happened. Cleanup of demo users (and organisations) is a manual action.
 
 The script misp-restore-botvrij.sh is slightly altered compared to the original misp-restore. If does not require user-input (it can run from cron) and contains the Mysql root username.
 
